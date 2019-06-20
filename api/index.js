@@ -3,8 +3,12 @@ const express = require('express');
 const app = express();
 const PORT = 3001;
 
-app.use((req,res) => {
+app.use((_req,res) => {
     res.statusCode = 200;
+    //Allows CORS
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Headers', "*");
+    //Get all 30 cards
     https.get(`https://frontend-interview.spotahome.com/api/public/listings/search/markers/madrid`,(response)=> {
         var body = '';
         var json;
@@ -23,6 +27,7 @@ app.use((req,res) => {
                     ids+= '&';
                 }
             }
+            //Get information for each of the 30 cards
             let homeCardsUrl = encodeURI('https://frontend-interview.spotahome.com/api/public/listings/search/homecards_ids?'+ids);
             console.log(homeCardsUrl);
             https.get(homeCardsUrl,(response2) => {
@@ -44,4 +49,5 @@ app.use((req,res) => {
 
 app.listen(process.env.PORT || PORT, () => {
     console.log("Listening on port "+PORT);
+    console.log("Go to http://localhost:"+PORT);
 });
