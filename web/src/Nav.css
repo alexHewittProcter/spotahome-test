@@ -1,0 +1,39 @@
+.nav {
+    background-color: #D2D2D2;
+    font-size: 20px;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    right: 0;
+    left:0;
+    z-index: 1000;
+}
+
+.nav > * {
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+}
+
+.leftNav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 30%;
+    margin: 0;
+}
+
+.rightNav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    width: 50%;
+    text-align: right;
+}
+
+@media only screen and (max-width:680px) {
+    .rightNav {
+        display: none;
+    }
+}

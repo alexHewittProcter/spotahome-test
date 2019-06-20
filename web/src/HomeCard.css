@@ -1,0 +1,103 @@
+.card {
+    padding: 30px;
+    background-color: #A2A2A2;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.cardImage {
+    float: left;
+    width: 30%;
+}
+
+.cardImage > img {
+    width: 100%;
+    display: block;
+    box-shadow: 10px 10px 15px grey;
+}
+
+.cardDetails { 
+    width: 60%;
+    text-align: left;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.cardDetails > p {
+    margin: 0;
+}
+
+.breaker {
+    clear: both;
+}
+
+.cardTitle{
+    display: inline-block;
+    width:80%;
+}
+.cardPrice {
+    position: relative;
+    text-align: center;
+    width: 20%;
+    float: right;
+    color: #FCD103;
+    background-color: black;
+    padding: 0px 0px 0px 0px;
+    border-radius: 25%;
+}
+
+.cardButton {
+    border: none;
+    padding: 10px 32px;
+    margin: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color:white;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.primaryButton {
+    background-color: #3D8F31;
+    border-bottom: #146A20 solid 5px;
+}
+
+.secondaryButton {
+    background-color: #F09218;
+    border-bottom: #B75F00 solid 5px;
+}
+
+@media only screen and (min-width:680px) {
+    .cardDetails {
+        float: right;
+    }
+    .cardButtons {
+        float: right;
+    }
+}
+
+@media only screen and (max-width:680px) {
+    .cardImage {
+        width: 100%;
+    }
+    .cardDetails {
+        width: 100%;
+        padding: 0;
+    }
+    .cardTitle {
+        display: block;
+        width: 100%;
+    }
+    .cardPrice {
+        display: block;
+        clear: both;
+    }
+    .cardButton {
+        margin: 0;
+        margin-top: 8px; 
+        width: 100%;
+    }
+    .secondaryButton {
+        display: none;
+    }
+}
